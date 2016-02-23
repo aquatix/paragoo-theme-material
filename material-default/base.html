@@ -7,12 +7,12 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
   <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">{{ logo }}</a>
 {% block navbar %}
 {% set active_page = active_page|default('index') -%}
       <ul class="right hide-on-med-and-down">
@@ -32,7 +32,18 @@
 {% endblock %}
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
+        {% for section_href, section_id, section_caption, navbar_section in navbar %}
+        <li{% if section_id == active_section %} class="active"{% endif %}>
+          <a href="{{ section_href|e }}">{{ section_caption }}</a>
+          <!--
+          <ul>
+            {% for href, id, caption in navbar_section %}
+            <li{% if id == active_page %} class="active"{% endif %}><a href="{{ href|e }}">{{ caption }}</a></li>
+            {% endfor %}
+          </ul>
+          -->
+        </li>
+        {% endfor %}
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
@@ -74,7 +85,8 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+          {{ footer }}
+          {# Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a> #}
       </div>
     </div>
   </footer>
