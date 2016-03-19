@@ -7,8 +7,18 @@
  */
 
 .icon-block {
-  padding: 0 15px;
+    padding: 0 15px;
 }
 .icon-block .material-icons {
-	font-size: inherit;
+    font-size: inherit;
+}
+
+h2
+{
+    font-size: 2.5rem;
+}
+
+h3
+{
+    font-size: 2rem;
 }
