@@ -63,24 +63,16 @@
 
 
         </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
+        {% for blockname in linkblocks %}
+            <div class="col l3 s12">
+              <h5 class="white-text">{{ linkblocks[blockname]['title'] }}</h5>
+              <ul>
+              {% for link in linkblocks[blockname]['links'] %}
+                <li><a class="white-text" href="{{ linkblocks[blockname]['links'][link]['url'] }}">{{ linkblocks[blockname]['links'][link]['title'] }}</a></li>
+              {% endfor %}
+              </ul>
+          </div>
+        {% endfor %}
       </div>
     </div>
     <div class="footer-copyright">
