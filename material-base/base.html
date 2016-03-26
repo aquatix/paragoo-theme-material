@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <meta name="theme-color" content="#616161" />
+  <meta name="theme-color" content="THEME_COLOUR" />
   <title>{% block title %}{{ page.title }}{% endblock %} - {{ site.title }}</title>
 
   <!-- CSS  -->
@@ -11,8 +11,8 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
-<body class="grey lighten-5">
-  <nav class="grey darken-2" role="navigation">
+<body class="BASE_COLOUR lighten-5">
+  <nav class="BASE_COLOUR darken-2" role="navigation">
       <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">{{ logo }}</a>
 {% block navbar %}
 {% set active_page = active_page|default('index') -%}
@@ -63,12 +63,12 @@
 {% endblock %}
 
 
-  <footer class="page-footer grey darken-2">
+  <footer class="page-footer BASE_COLOUR darken-2">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
             <h5 class="white-text">{{ about_title }}</h5>
-            <p class="grey-text text-lighten-4">{{ about }}</p>
+            <p class="BASE_COLOUR-text text-lighten-4">{{ about }}</p>
 
 
         </div>
