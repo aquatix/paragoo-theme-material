@@ -50,7 +50,9 @@
     </div>
   </nav>
 {% block body %}
+{% if show_title == True %}
 <h1 class="header center orange-text">{{ page.title }}</h1>
+{% endif %}
 
 <div class="container">
 {{ htmlbody }}
