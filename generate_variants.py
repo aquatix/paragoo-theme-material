@@ -8,4 +8,7 @@ variants = {
         }
 
 
-for 
+for variant in variants:
+    # Loop over the colour variants and generate their respective themes
+    if utilkit.dir_exists(variant):
+        pass
