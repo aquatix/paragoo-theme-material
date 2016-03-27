@@ -26,6 +26,10 @@ for variant in variants:
     print(variant_dir)
     fileutil.archive_if_exists(variant_dir)
     fileutil.ensure_dir_exists(variant_dir, fullpath=True)
+
+    for asset in assets:
+        fileutil.copytree(os.path.join(base_dir, asset), os.path.join(variant_dir, asset))
+
     for template in templates:
         with open(os.path.join(base_dir, template + '.html')) as f:
             content = [line.rstrip('\n') for line in f]
