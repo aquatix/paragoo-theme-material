@@ -11,8 +11,8 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
-<body class="BASE_COLOUR lighten-5">
-  <nav class="BASE_COLOUR darken-2" role="navigation">
+<body class="BASE_COLOUR">
+  <nav class="NAV_COLOUR" role="navigation">
       <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">{{ logo }}</a>
 {% block navbar %}
 {% set active_page = active_page|default('index') -%}
@@ -63,21 +63,21 @@
 {% endblock %}
 
 
-  <footer class="page-footer BASE_COLOUR darken-2">
+  <footer class="page-footer FOOTER_COLOUR">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
             <h5 class="white-text">{{ about_title }}</h5>
-            <p class="BASE_COLOUR-text text-lighten-4">{{ about }}</p>
+            <p class="FOOTER_TEXT">{{ about }}</p>
 
 
         </div>
         {% for blockname in linkblocks %}
             <div class="col l3 s12">
-              <h5 class="white-text">{{ linkblocks[blockname]['title'] }}</h5>
+              <h5 class="LINKBLOCK_TEXT">{{ linkblocks[blockname]['title'] }}</h5>
               <ul>
               {% for link in linkblocks[blockname]['links'] %}
-                <li><a class="white-text" href="{{ linkblocks[blockname]['links'][link]['url'] }}">{{ linkblocks[blockname]['links'][link]['title'] }}</a></li>
+                <li><a class="LINKBLOCK_TEXT" href="{{ linkblocks[blockname]['links'][link]['url'] }}">{{ linkblocks[blockname]['links'][link]['title'] }}</a></li>
               {% endfor %}
               </ul>
           </div>

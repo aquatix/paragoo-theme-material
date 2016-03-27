@@ -7,7 +7,8 @@ PREFIX = 'material-'
 BASE = 'material-base'
 
 variants = {
-        'grey': {'theme_colour': '#616161', 'base_colour': 'grey', 'highlight_colour': 'orange'},
+        'green': {'theme_colour': '#1b5e20', 'base_colour': 'green lighten-5', 'nav_colour': 'green darken-4', 'footer_colour': 'green darken-4', 'FOOTER_TEXT': 'green-text text-lighten-4', 'LINKBLOCK_TEXT': 'white-text', 'highlight_colour': 'orange'},
+        'grey': {'theme_colour': '#616161', 'base_colour': 'grey lighten-5', 'nav_colour': 'grey darken-2', 'footer_colour': 'grey darken-2', 'FOOTER_TEXT': 'grey-text text-lighten-4', 'LINKBLOCK_TEXT': 'white-text', 'highlight_colour': 'orange'},
         }
 
 
