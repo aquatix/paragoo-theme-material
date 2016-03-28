@@ -21,7 +21,7 @@ variants = {
                 'card_colour': 'grey darken-2', 'card_text': 'white-text',
                 'footer_colour': 'grey darken-2', 'footer_text': 'grey-text text-lighten-4', 'linkblock_text': 'white-text',
                 'highlight_colour': 'orange',
-                'link_colour': '#ff9800'
+                'link_colour': '#2196f3'
             },
         }
 
