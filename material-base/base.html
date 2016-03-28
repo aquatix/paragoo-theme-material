@@ -17,7 +17,8 @@
 {% block navbar %}
 {% set active_page = active_page|default('index') -%}
       <ul class="right hide-on-med-and-down">
-        {% for section_href, section_id, section_caption, navbar_section in navbar %}
+        {% for section_href, section_id, section_caption, section_hassub, navbar_section in navbar %}
+        {% if section_hassub == true %}
         <li{% if section_id == active_section %} class="active"{% endif %}>
           <a href="{{ section_href|e }}">{{ section_caption }}</a>
           <!--
@@ -28,22 +29,37 @@
           </ul>
           -->
         </li>
+        {% else %}
+        <li{% if section_id == active_section %} class="active"{% endif %}>
+          <a href="{{ section_href|e }}">{{ section_caption }}</a>
+        </li>
+        {% endif %}
         {% endfor %}
       </ul>
 {% endblock %}
 
       <ul id="nav-mobile" class="side-nav">
-        {% for section_href, section_id, section_caption, navbar_section in navbar %}
+        {% for section_href, section_id, section_caption, section_hassub, navbar_section in navbar %}
+        {% if section_hassub == true %}
+        <li class="no-padding{% if section_id == active_section %} active{% endif %}">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header  waves-effect waves-NAV_COLOUR">{{ section_caption }}</a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="{{ section_href|e }}">{{ section_caption }}</a>
+                    {% for href, id, caption in navbar_section %}
+                        <li{% if id == active_page %} class="active"{% endif %}><a href="{{ href|e }}">{{ caption }}</a></li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </li>
+          </ul>
+        </li>
+        {% else %}
         <li{% if section_id == active_section %} class="active"{% endif %}>
           <a href="{{ section_href|e }}">{{ section_caption }}</a>
-          <!--
-          <ul>
-            {% for href, id, caption in navbar_section %}
-            <li{% if id == active_page %} class="active"{% endif %}><a href="{{ href|e }}">{{ caption }}</a></li>
-            {% endfor %}
-          </ul>
-          -->
         </li>
+        {% endif %}
         {% endfor %}
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -51,8 +67,8 @@
   </nav>
 {% block body %}
 {% if show_title == True %}
-<h1 class="header center HIGHLIGHT_COLOUR-text">{{ page.title }}</h1>
 <div class="container">
+<h1 class="header HEADER_ALIGN HIGHLIGHT_COLOUR-text">{{ page.title }}</h1>
 {% endif %}
 
 {{ htmlbody }}
