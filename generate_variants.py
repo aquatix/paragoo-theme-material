@@ -13,6 +13,7 @@ variants = {
                 'card_colour': 'green darken-4', 'card_text': 'white-text',
                 'footer_colour': 'green darken-4', 'footer_text': 'green-text text-lighten-4', 'linkblock_text': 'white-text',
                 'highlight_colour': 'green-text text-darken-4',
+                'link_colour': '#ff9800'
             },
         'grey': {'theme_colour': '#616161', 'base_colour': 'grey lighten-5',
                 'nav_colour': 'grey darken-2',
@@ -20,11 +21,12 @@ variants = {
                 'card_colour': 'grey darken-2', 'card_text': 'white-text',
                 'footer_colour': 'grey darken-2', 'footer_text': 'grey-text text-lighten-4', 'linkblock_text': 'white-text',
                 'highlight_colour': 'orange',
+                'link_colour': '#ff9800'
             },
         }
 
 
-templates = ['androidapp', 'base', 'gallery', 'galleryitem', 'news']
+templates = ['androidapp.html', 'base.html', 'gallery.html', 'galleryitem.html', 'news.html', 'css/style.css']
 assets = ['css', 'js']
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -44,7 +46,7 @@ for variant in variants:
         fileutil.copytree(os.path.join(base_dir, asset), os.path.join(variant_dir, asset))
 
     for template in templates:
-        with open(os.path.join(base_dir, template + '.html')) as f:
+        with open(os.path.join(base_dir, template)) as f:
             content = [line.rstrip('\n') for line in f]
 
             for colour in variants[variant]:
@@ -53,6 +55,6 @@ for variant in variants:
                     output.append(line.replace(colour.upper(), variants[variant][colour]))
                 content = output
 
-            with open(os.path.join(variant_dir, template + '.html'), 'w') as fo:
+            with open(os.path.join(variant_dir, template), 'w') as fo:
                 content = '\n'.join(content)
                 fo.write(content)
