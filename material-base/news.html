@@ -1,6 +1,8 @@
 {% for item in items %}
-    <div class="news">
-        <div class="date">{{ item.key }}</div>
-        <div class="newscontent">{{ item.content }}</div>
+    <div class="news card CARD_COLOUR">
+        <div class="newscontent card-content CARD_TEXT">
+            <div class="date card-title">{{ item.key }}</div>
+            {{ item.content }}
+        </div>
     </div>
 {% endfor %}
