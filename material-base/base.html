@@ -15,6 +15,7 @@
   <nav class="NAV_COLOUR" role="navigation">
       <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">{{ logo }}</a>
 {% block navbar %}
+{% if mobiletoggle != false %}
 {% set active_page = active_page|default('index') -%}
       <ul class="right hide-on-med-and-down">
         {% for section_href, section_id, section_caption, section_hassub, navbar_section in navbar %}
@@ -36,9 +37,11 @@
         {% endif %}
         {% endfor %}
       </ul>
-{% endblock %}
 
       <ul id="nav-mobile" class="side-nav">
+{% else %}
+      <ul id="nav-mobile" class="side-nav fixed">
+{% endif %}
         {% for section_href, section_id, section_caption, section_hassub, navbar_section in navbar %}
         {% if section_hassub == true %}
         <li class="no-padding{% if section_id == active_section %} active{% endif %}">
@@ -65,6 +68,7 @@
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
+{% endblock %}
 {% block body %}
 {% if show_title == True %}
 <div class="container">
