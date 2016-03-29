@@ -50,7 +50,7 @@
         {% if section_hassub == true %}
         <li class="no-padding{% if section_id == active_section %} active{% endif %}">
           <ul class="collapsible collapsible-accordion">
-            <li><a class="collapsible-header  waves-effect waves-NAV_COLOUR">{{ section_caption }}</a>
+            <li class="bold"><a class="collapsible-header  waves-effect waves-NAV_COLOUR">{{ section_caption }}</a>
                 <div class="collapsible-body">
                     <ul>
                         <li><a href="{{ section_href|e }}">{{ section_caption }}</a>
@@ -63,7 +63,7 @@
           </ul>
         </li>
         {% else %}
-        <li{% if section_id == active_section %} class="active"{% endif %}>
+        <li class="bold{% if section_id == active_section %} active{% endif %}">
           <a href="{{ section_href|e }}">{{ section_caption }}</a>
         </li>
         {% endif %}
