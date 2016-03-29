@@ -12,7 +12,10 @@
   <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body class="BASE_COLOUR">
-  <header>
+{% if mobiletoggle == false %}
+{% set pageclass = ' class="bigmenu"' %}
+{% endif %}
+  <header{{ pageclass }}>
   <nav class="NAV_COLOUR" role="navigation">
       <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">{{ logo }}</a>
 {% block navbar %}
@@ -72,7 +75,7 @@
 {% endblock %}
 {% block body %}
   </header>
-  <main>
+  <main{{ pageclass}}>
 {% if show_title == True %}
 <div class="container">
 <h1 class="header HEADER_ALIGN HEADER_TEXT">{{ page.title }}</h1>
