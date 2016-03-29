@@ -13,9 +13,9 @@
 </head>
 <body class="BASE_COLOUR">
 {% if mobiletoggle == false %}
-{% set pageclass = ' class="bigmenu"' %}
+{% set pageclass = " bigmenu" %}
 {% endif %}
-  <header{{ pageclass }}>
+  <header class="{{ pageclass }}">
   <nav class="NAV_COLOUR" role="navigation">
       <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">{{ logo }}</a>
 {% block navbar %}
@@ -75,7 +75,7 @@
 {% endblock %}
 {% block body %}
   </header>
-  <main{{ pageclass}}>
+  <main class="{{ pageclass}}">
 {% if show_title == True %}
 <div class="container">
 <h1 class="header HEADER_ALIGN HEADER_TEXT">{{ page.title }}</h1>
@@ -89,7 +89,7 @@
 {% endblock %}
 
   </main>
-  <footer class="page-footer FOOTER_COLOUR">
+  <footer class="page-footer FOOTER_COLOUR{{ pageclass }}">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
