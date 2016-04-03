@@ -30,12 +30,33 @@ h3
 
 a
 {
-    color: LINK_COLOUR;
+    color: LINK_TEXT;
 }
 
 .bold > a
 {
     font-weight: bold;
+}
+
+pre
+{
+    padding: .5em 1em;
+}
+
+pre, code
+{
+    background-color: BLOCK_COLOUR;
+    color: BLOCK_TEXT;
+}
+
+.side-nav .collapsible-body li.active, .side-nav.fixed .collapsible-body li.active
+{
+    background-color: BLOCK_COLOUR;
+}
+
+.side-nav .collapsible-body li.active a, .side-nav.fixed .collapsible-body li.active a
+{
+    color: BLOCK_TEXT;
 }
 
 @media (min-width: 601px)
