@@ -52,14 +52,16 @@
 {% endif %}
         {% for section_href, section_id, section_caption, section_hassub, navbar_section in navbar %}
         {% if section_hassub == true %}
-        <li class="no-padding{% if section_id == active_section %} active{% endif %}">
+        <li class="no-padding">
           <ul class="collapsible collapsible-accordion">
-            <li class="bold"><a class="collapsible-header  waves-effect waves-NAV_COLOUR">{{ section_caption }}</a>
+              <li class="bold"><a class="collapsible-header waves-effect waves-NAV_COLOUR{% if section_id == active_section %} active{% endif %}">{{ section_caption }}</a>
                 <div class="collapsible-body">
                     <ul>
-                        <li><a href="{{ section_href|e }}">{{ section_caption }}</a>
+                        <!--<li><a href="{{ section_href|e }}">{{ section_caption }}</a>-->
                     {% for href, id, caption in navbar_section %}
+                        {% if href != section_href %}
                         <li{% if id == active_page %} class="active"{% endif %}><a href="{{ href|e }}">{{ caption }}</a></li>
+                        {% endif %}
                     {% endfor %}
                     </ul>
                 </div>
