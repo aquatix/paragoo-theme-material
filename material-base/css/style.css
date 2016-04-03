@@ -49,6 +49,11 @@ pre, code
     color: BLOCK_TEXT;
 }
 
+i.material-icons
+{
+    vertical-align: middle;
+}
+
 .side-nav .collapsible-body li.active, .side-nav.fixed .collapsible-body li.active
 {
     background-color: BLOCK_COLOUR;
