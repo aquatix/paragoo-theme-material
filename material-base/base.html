@@ -82,7 +82,9 @@
   <main class="{{ pageclass}}">
 {% if show_title == True %}
 <div class="container">
+    {% if page.title is not none %}
 <h1 class="header HEADER_ALIGN HEADER_TEXT">{{ page.title }}</h1>
+    {% endif %}
 {% endif %}
 
 {{ htmlbody }}
