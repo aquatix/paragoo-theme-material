@@ -7,7 +7,7 @@ PREFIX = 'material-'
 BASE = 'material-base'
 
 variants = {
-        'green': {'theme_colour': '#1b5e20', 'base_colour': 'green lighten-5',
+        'green': {'theme_colour': '#1b5e20', 'base_colour': 'green lighten-5', 'base_text': 'black',
                 'nav_colour': 'green darken-4',
                 'header_align': '', 'header_text': 'green-text text-darken-4',
                 'card_colour': 'green darken-4', 'card_text': 'white-text',
@@ -15,13 +15,21 @@ variants = {
                 'highlight_colour': 'green-text text-darken-4',
                 'link_colour': '#ff9800'
             },
-        'grey': {'theme_colour': '#616161', 'base_colour': 'grey lighten-5',
+        'grey': {'theme_colour': '#616161', 'base_colour': 'grey lighten-5', 'base_text': 'black',
                 'nav_colour': 'grey darken-2',
                 'header_align': 'center', 'header_text': 'orange-text',
                 'card_colour': 'grey darken-2', 'card_text': 'white-text',
                 'footer_colour': 'grey darken-2', 'footer_text': 'grey-text text-lighten-4', 'linkblock_text': 'white-text',
                 'highlight_colour': 'orange',
                 'link_colour': '#2196f3'
+            },
+        'graphite': {'theme_colour': '#424242', 'base_colour': 'grey darken-2', 'base_text': 'grey-text text-lighten-2',
+                'nav_colour': 'grey darken-4',
+                'header_align': 'center', 'header_text': 'orange-text',
+                'card_colour': 'teal darken-4', 'card_text': 'white-text',
+                'footer_colour': 'grey darken-4', 'footer_text': 'grey-text text-lighten-4', 'linkblock_text': 'white-text',
+                'highlight_colour': 'teal-text text-lighten-3',
+                'link_colour': '#80cbc4'
             },
         }
 
