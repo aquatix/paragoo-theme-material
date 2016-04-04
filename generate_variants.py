@@ -25,7 +25,7 @@ variants = {
             },
         'graphite': {'theme_colour': '#424242', 'base_colour': 'grey darken-2', 'base_text': 'grey-text text-lighten-2',
                 'nav_colour': 'grey darken-4',
-                'header_align': 'center', 'header_text': 'orange-text',
+                'header_align': '', 'header_text': 'orange-text',
                 'card_colour': 'teal darken-4', 'card_text': 'white-text',
                 'footer_colour': 'grey darken-4', 'footer_text': 'grey-text text-lighten-4', 'linkblock_text': 'white-text',
                 'highlight_colour': 'teal-text text-lighten-3',
