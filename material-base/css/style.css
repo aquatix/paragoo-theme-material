@@ -49,6 +49,11 @@ pre, code
     color: BLOCK_TEXT;
 }
 
+pre > code
+{
+    font-size: 0.9em;
+}
+
 i.material-icons
 {
     vertical-align: middle;
