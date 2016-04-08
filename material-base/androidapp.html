@@ -1,1 +1,16 @@
-<a href="{{ url }}">{{ title }}</a> <a href="#{{ app_id }}">[+]</a> <div style="display: none" class="popup" id="app-{{ app_id }}">{{ description }}</div> - 
+
+<div class="card CARD_COLOUR">
+    <div class="card-content CARD_TEXT">
+        <span class="card-title activator">{{ title }}<i class="material-icons right">more_vert</i></span>
+        {% if notes is defined %}
+        <p>{{ notes }}</p>
+        {% endif %}
+    </div>
+    <div class="card-reveal CARD_COLOUR">
+        <span class="card-title">{{ title }}<i class="material-icons right">close</i></span>
+        {{ description }}
+    </div>
+    <div class="card-action">
+        <p><a href="{{ url }}">{{ title }} on PlayStore</a></p>
+    </div>
+</div>
