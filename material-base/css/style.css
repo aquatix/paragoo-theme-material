@@ -50,6 +50,16 @@ pre, code
     font-size: 0.9em;
 }
 
+.toc > ul, .toc > ul li
+{
+    list-style-type: square;
+}
+
+.toc > ul
+{
+    padding: 0 0 0 40px;
+}
+
 i.material-icons
 {
     vertical-align: middle;
