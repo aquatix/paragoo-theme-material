@@ -121,10 +121,10 @@
         </div>
         {% for blockname in linkblocks %}
             <div class="col l3 s12">
-              <h5 class="LINKBLOCK_TEXT">{{ linkblocks[blockname]['title'] }}</h5>
+              <h5 class="LINKLIST_TEXT">{{ linkblocks[blockname]['title'] }}</h5>
               <ul>
               {% for link in linkblocks[blockname]['links'] %}
-                <li><a class="LINKBLOCK_TEXT" href="{{ linkblocks[blockname]['links'][link]['url'] }}">{{ linkblocks[blockname]['links'][link]['title'] }}</a></li>
+                <li><a class="LINK_TEXT" href="{{ linkblocks[blockname]['links'][link]['url'] }}">{{ linkblocks[blockname]['links'][link]['title'] }}</a></li>
               {% endfor %}
               </ul>
           </div>
