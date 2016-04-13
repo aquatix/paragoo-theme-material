@@ -46,7 +46,7 @@
           <!--
           <ul>
             {% for href, id, caption in navbar_section %}
-            <li{% if id == active_page %} class="active"{% endif %}><a href="{{ href|e }}">{{ caption }}</a></li>
+            <li{% if section_id == active_section and id == active_page %} class="active"{% endif %}><a href="{{ href|e }}">{{ caption }}</a></li>
             {% endfor %}
           </ul>
           -->
@@ -73,7 +73,7 @@
                         <!--<li><a href="{{ section_href|e }}">{{ section_caption }}</a>-->
                     {% for href, id, caption in navbar_section %}
                         {% if href != section_href %}
-                        <li{% if id == active_page %} class="active"{% endif %}><a href="{{ href|e }}">{{ caption }}</a></li>
+                        <li{% if section_id == active_section and id == active_page %} class="active"{% endif %}><a href="{{ href|e }}">{{ caption }}</a></li>
                         {% endif %}
                     {% endfor %}
                     </ul>
