@@ -50,12 +50,18 @@ pre, code
     font-size: 0.9em;
 }
 
-.toc > ul, .toc > ul li
+.toc > ul, .toc > ul li,
+.container > ul, .container > ul li
 {
     list-style-type: square;
 }
 
 .toc > ul
+{
+    padding: 0 0 0 40px;
+}
+
+.container > ul
 {
     padding: 0 0 0 40px;
 }
