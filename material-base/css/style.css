@@ -51,7 +51,7 @@ pre, code
 }
 
 .toc > ul, .toc > ul li,
-.container > ul, .container > ul li
+main ul, main ul li
 {
     list-style-type: square;
 }
@@ -61,7 +61,7 @@ pre, code
     padding: 0 0 0 40px;
 }
 
-.container > ul
+main ul
 {
     padding: 0 0 0 40px;
 }
