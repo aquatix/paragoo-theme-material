@@ -43,10 +43,21 @@ pre
     padding: .5em 1em;
 }
 
+pre,
+code,
+kbd,
+samp,
+tt
+{
+    font-family:monospace,monospace;
+    font-size:1em;
+}
+
 pre, code
 {
     background-color: BLOCK_COLOUR;
     color: BLOCK_TEXT;
+    font-family: 'Roboto Mono', monospace;
     font-size: 0.9em;
 }
 
