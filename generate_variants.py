@@ -9,6 +9,8 @@ BASE = 'material-base'
 TIMESTAMP = datetime.datetime.now()
 CACHEBUSTER = str(int(datetimeutil.python_to_unix(TIMESTAMP)))
 
+files_to_rename = {'style.css': 'style_' + CACHEBUSTER + '.css'}
+
 variants = {
         'green': {'theme_colour': '#1b5e20', 'base_colour': 'green lighten-5', 'base_text': 'black',
                 'nav_colour': 'green darken-4',
@@ -54,7 +56,7 @@ for variant in variants:
     fileutil.ensure_dir_exists(variant_dir, fullpath=True)
 
     for asset in assets:
-        fileutil.copytree(os.path.join(base_dir, asset), os.path.join(variant_dir, asset))
+        fileutil.copytree(os.path.join(base_dir, asset), os.path.join(variant_dir, asset), rename=files_to_rename)
 
     for template in templates:
         with open(os.path.join(base_dir, template)) as f:
