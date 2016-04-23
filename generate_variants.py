@@ -1,10 +1,13 @@
 import os
 import stat
 import sys
-from utilkit import fileutil
+import datetime
+from utilkit import fileutil, datetimeutil
 
 PREFIX = 'material-'
 BASE = 'material-base'
+TIMESTAMP = datetime.datetime.now()
+CACHEBUSTER = str(int(datetimeutil.python_to_unix(TIMESTAMP)))
 
 variants = {
         'green': {'theme_colour': '#1b5e20', 'base_colour': 'green lighten-5', 'base_text': 'black',
@@ -56,6 +59,8 @@ for variant in variants:
     for template in templates:
         with open(os.path.join(base_dir, template)) as f:
             content = [line.rstrip('\n') for line in f]
+
+            variants[variant]['cachebuster'] = CACHEBUSTER
 
             for colour in variants[variant]:
                 output = []
