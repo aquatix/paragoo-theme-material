@@ -27,6 +27,12 @@
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/tomorrow-night.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    hljs.configure({useBR: true});
+    $('pre.code').each(function(i, block) {
+          hljs.highlightBlock(block);
+    });
+  </script>
 
 </head>
 <body class="BASE_COLOUR BASE_TEXT">
