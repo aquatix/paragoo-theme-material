@@ -70,8 +70,9 @@ for variant in variants:
                     output.append(line.replace(colour.upper(), variants[variant][colour]))
                 content = output
 
-            if template.endswith('.css'):
-                template = fileutil.filename_addstring(template, '_' + CACHEBUSTER)
+            for asset in assets:
+                if template.endswith('.' + asset):
+                    template = fileutil.filename_addstring(template, '_' + CACHEBUSTER)
             with open(os.path.join(variant_dir, template), 'w') as fo:
                 content = '\n'.join(content)
                 fo.write(content)
