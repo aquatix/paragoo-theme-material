@@ -92,10 +92,10 @@ i.material-icons
     color: BLOCK_TEXT;
 }
 
-@media (min-width: 601px)
+@media (min-width: 980px)
 {
     header.bigmenu, main.bigmenu, footer.bigmenu
     {
-        padding-left: 100px;
+        padding-left: 300px;
     }
 }
