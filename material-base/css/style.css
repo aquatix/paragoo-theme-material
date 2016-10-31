@@ -82,7 +82,7 @@ i.material-icons
     vertical-align: middle;
 }
 
-.side-nav .collapsible-body li.active, .side-nav.fixed .collapsible-body li.active
+.side-nav .collapsible-body > ul:not(.collapsible) > li.active, .side-nav.fixed .collapsible-body > ul:not(.collapsible) > li.active
 {
     background-color: BLOCK_COLOUR;
 }
