@@ -82,6 +82,23 @@ i.material-icons
     vertical-align: middle;
 }
 
+nav .button-collapse
+{
+    /* Fix for misalignment of hamburger icon */
+    margin: 0;
+}
+
+nav .button-collapse i
+{
+    /* Make the hamburger icon great again */
+    font-size: 2.7rem;
+}
+
+.side-nav .collapsible-body
+{
+    padding: 0;
+}
+
 .side-nav .collapsible-body > ul:not(.collapsible) > li.active, .side-nav.fixed .collapsible-body > ul:not(.collapsible) > li.active
 {
     background-color: BLOCK_COLOUR;
