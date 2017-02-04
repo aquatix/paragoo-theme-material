@@ -34,7 +34,7 @@ variants = {
                 'card_colour': 'teal darken-4', 'card_text': 'white-text',
                 'footer_colour': 'grey darken-4', 'footer_text': 'grey-text text-lighten-4', 'linklist_text': 'white-text',
                 'highlight_colour': 'teal-text text-lighten-3',
-                'link_text': '#80cbc4', 'block_colour': '#212121', 'block_text': '#e0e0e0',
+                'link_text': '#ffab40', 'block_colour': '#212121', 'block_text': '#e0e0e0',
             },
         }
 
