@@ -1,7 +1,9 @@
-(function($){
-  $(function(){
+var options = {}
+var elem = document.querySelector('.sidenav');
+var instance = M.Sidenav.init(elem, options);
 
-    $('.button-collapse').sideNav();
-
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
+var elem = document.querySelector('.collapsible');
+  var instance = M.Collapsible.init(elem, {
+    // inDuration: 1000,
+    // outDuration: 1000
+  });

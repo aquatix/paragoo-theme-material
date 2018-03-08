@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Roboto+Mono&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   {# <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic' rel='stylesheet' type='text/css'> #}
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen"/>
   {# <link href="https://cdn.aquariusoft.org/libs/materialize/0.98.0/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen"/> #}
   <link href="/css/style_CACHEBUSTER.css" type="text/css" rel="stylesheet" media="screen"/>
 {% for cssfile in site_css %}
@@ -60,9 +60,9 @@
         {% endfor %}
       </ul>
 
-      <ul id="nav-mobile" class="side-nav">
+      <ul id="nav-mobile" class="sidenav">
 {% else %}
-      <ul id="nav-mobile" class="side-nav fixed">
+      <ul id="nav-mobile" class="sidenav fixed">
 {% endif %}
         {% for section_href, section_id, section_caption, section_hassub, navbar_section in navbar %}
         {% if section_hassub == true %}
@@ -89,7 +89,7 @@
         {% endif %}
         {% endfor %}
       </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      <a href="#" data-activates="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
 {% endblock %}
@@ -142,8 +142,8 @@
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
   {# <script src="https://cdn.aquariusoft.org/libs/materialize/0.98.0/js/materialize.min.js"></script> #}
   <script src="/js/init.js"></script>
 
