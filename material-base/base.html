@@ -68,7 +68,7 @@
           <ul class="collapsible collapsible-accordion">
             {% for section_href, section_id, section_caption, section_hassub, navbar_section in navbar %}
             {% if section_hassub == true %}
-              <li class="bold"><a class="collapsible-header waves-effect waves-NAV_COLOUR{% if section_id == active_section %} active{% endif %}">{{ section_caption }}</a>
+              <li class="bold{% if section_id == active_section %} active{% endif %}"><a class="collapsible-header waves-effect waves-NAV_COLOUR{% if section_id == active_section %} active{% endif %}">{{ section_caption }}</a>
                 <div class="collapsible-body">
                     <ul>
                         <!--<li><a href="{{ section_href|e }}">{{ section_caption }}</a>-->
