@@ -28,6 +28,18 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 
+{% if googleanalytics %}
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ googleanalytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ googleanalytics }}');
+  </script>
+  <!-- End Google Analytics -->
+{% endif %}
 </head>
 <body class="BASE_COLOUR BASE_TEXT">
 {% if mobiletoggle == false %}
@@ -147,21 +159,6 @@
   {# <script src="https://cdn.aquariusoft.org/libs/materialize/0.98.0/js/materialize.min.js"></script> #}
   <script src="/js/init.js?20180309"></script>
 
-  {% if googleanalytics %}
-  <!-- Google Analytics -->
-  <script>
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', '{{ googleanalytics }}']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-  <!-- End Google Analytics -->
-  {% endif %}
   {% if piwikurl %}
   <!-- Piwik -->
   <script type="text/javascript">
