@@ -1,8 +1,9 @@
+import datetime
 import os
 import stat
 import sys
-import datetime
-from utilkit import fileutil, datetimeutil
+
+from utilkit import datetimeutil, fileutil
 
 PREFIX = 'material-'
 BASE = 'material-base'
