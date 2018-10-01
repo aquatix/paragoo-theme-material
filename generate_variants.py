@@ -30,7 +30,7 @@ variants = {
         'link_text': '#2196f3', 'block_colour': '#ddd', 'block_text': '#000',
     },
     'graphite': {
-        'theme_colour': '#424242', 'base_colour': 'grey darken-2', 'base_text': 'grey-text text-lighten-2',
+        'theme_colour': '#212121', 'base_colour': 'grey darken-2', 'base_text': 'grey-text text-lighten-2',
         'nav_colour': 'grey darken-4',
         'header_align': '', 'header_text': 'orange-text',
         'card_colour': 'teal darken-4', 'card_text': 'white-text',
