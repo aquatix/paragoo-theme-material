@@ -1,7 +1,5 @@
 import datetime
 import os
-import stat
-import sys
 
 from utilkit import datetimeutil, fileutil
 
