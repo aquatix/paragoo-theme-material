@@ -41,7 +41,7 @@ variants = {
 }
 
 
-templates = ['androidapp.html', 'base.html', 'gallery.html', 'galleryitem.html', 'news.html', 'css/style.css']
+templates = ['androidapp.html', 'base.html', 'gallery.html', 'galleryitem.html', 'news.html', 'timeline.html', 'css/style.css']
 assets = ['css', 'js']
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
