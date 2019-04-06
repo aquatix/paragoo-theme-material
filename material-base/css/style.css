@@ -115,6 +115,13 @@ nav .sidenav-trigger i
     }
 }
 
+main
+{
+    min-height: 60vh;
+    display: flex;
+    flex-grow: 1;
+}
+
 
 /* Great timeline from https://codepen.io/melnik909/pen/qPjwvq and adapted */
 
@@ -123,7 +130,7 @@ nav .sidenav-trigger i
     --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);
 
     position: relative;
-    padding-top: 3rem;
+/*    padding-top: 3rem; */
     padding-bottom: 3rem;
 }
 
@@ -188,7 +195,7 @@ nav .sidenav-trigger i
 }
 
 .timeline__day{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     display: block;
 }
