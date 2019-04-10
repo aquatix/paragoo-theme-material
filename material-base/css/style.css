@@ -97,7 +97,7 @@ nav .sidenav-trigger i
     padding: 0;
 }
 
-.sidenav .collapsible-body > ul:not(.collapsible) > li.active, .sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active
+.sidenav .collapsible-body > ul:not(.collapsible) > li.active, .sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active
 {
     background-color: BLOCK_COLOUR;
 }
