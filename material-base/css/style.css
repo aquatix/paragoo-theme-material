@@ -126,6 +126,8 @@ main
 /* Great timeline from https://codepen.io/melnik909/pen/qPjwvq and adapted */
 
 .timeline{
+    --timelineMainColor: #4557bb;
+    font-size: 16px;
     --uiTimelineMainColor: var(--timelineMainColor, #222);
     --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);
 
@@ -241,7 +243,8 @@ main
     }
 }
 
-@media screen and (max-width: 640px){
+@media screen and (max-width: 640px)
+{
 
     .timeline:before{
         left: 0;
@@ -263,9 +266,4 @@ main
     .timeline__date{
         top: 0;
     }
-}
-
-.timeline{
-    --timelineMainColor: #4557bb;
-    font-size: 16px;
 }
