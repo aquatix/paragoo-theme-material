@@ -97,7 +97,7 @@ nav .sidenav-trigger i
     padding: 0;
 }
 
-.sidenav .collapsible-body > ul:not(.collapsible) > li.active, .sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active
+.sidenav .collapsible-body > ul:not(.collapsible) > li.active, .sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active
 {
     background-color: BLOCK_COLOUR;
 }
@@ -126,6 +126,8 @@ main
 /* Great timeline from https://codepen.io/melnik909/pen/qPjwvq and adapted */
 
 .timeline{
+    --timelineMainColor: #4557bb;
+    font-size: 16px;
     --uiTimelineMainColor: var(--timelineMainColor, #222);
     --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);
 
@@ -216,7 +218,8 @@ main
     color: #000;
 }
 
-@media screen and (min-width: 641px){
+@media screen and (min-width: 641px)
+{
 
     .timeline:before{
         left: 30px;
@@ -241,7 +244,8 @@ main
     }
 }
 
-@media screen and (max-width: 640px){
+@media screen and (max-width: 640px)
+{
 
     .timeline:before{
         left: 0;
@@ -263,9 +267,4 @@ main
     .timeline__date{
         top: 0;
     }
-}
-
-.timeline{
-    --timelineMainColor: #4557bb;
-    font-size: 16px;
 }
