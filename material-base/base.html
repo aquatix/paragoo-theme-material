@@ -19,14 +19,13 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Roboto+Mono&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   {# <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic' rel='stylesheet' type='text/css'> #}
-  <link href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.1.0/dist/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen"/>
-  {# <link href="https://cdn.aquariusoft.org/libs/materialize/0.98.0/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen"/> #}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.1-alpha/dist/css/materialize.min.css">
   <link href="/css/style_CACHEBUSTER.css" type="text/css" rel="stylesheet" media="screen"/>
 {% for cssfile in site_css %}
   <link href="{{ cssfile }}" rel="stylesheet">
 {% endfor %}
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/styles/devibeans.min.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/devibeans.min.css">
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 
 {% if googleanalytics %}
@@ -155,9 +154,8 @@
 
 
   <!--  Scripts-->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.1.0/dist/js/materialize.min.js"></script>
-  {# <script src="https://cdn.aquariusoft.org/libs/materialize/0.98.0/js/materialize.min.js"></script> #}
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.1-alpha/dist/js/materialize.min.js"></script>
   <script src="/js/init.js"></script>
 
   {% if piwikurl %}
